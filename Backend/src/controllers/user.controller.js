@@ -40,7 +40,7 @@ const login = async (req , res) => {
     const {mobile_number , password} = req.body
     try {
         const existUser = await User.findOne({mobile_number}).select('+password')
-        if(!existUser) return res.status(400).json({message : "User already exists"})
+        if(!existUser) return res.status(400).json({message : "User does not exists"})
         const hashPass = existUser.password;
         const isSame = await bcrypt.compare(password, hashPass)
         if(!isSame) return res.status(400).json({message : "Password or mobile_number does not match"})

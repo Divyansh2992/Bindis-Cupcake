@@ -41,7 +41,7 @@ const productSchema = new mongoose.Schema(
                 type:String
             }
         },
-        reviews:{
+        reviews:[{
             userId:{
                 type:mongoose.Schema.Types.ObjectId,
                 ref:"User",
@@ -54,11 +54,19 @@ const productSchema = new mongoose.Schema(
                 enum:[1,2,3,4,5],
                 default:0
             },
-            likes:Number,
-            dislikes:Number,
-            postedAt: { type: Date, default: Date.now }
-        }
-
+            likes:{
+                type: Number,
+                default: 0
+            },
+            dislikes:{
+                type: Number,
+                default: 0
+            },
+            postedAt: { 
+                type: Date, 
+                default: Date.now 
+            }
+        }]
     },
     {
         timestamps:true

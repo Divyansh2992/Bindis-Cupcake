@@ -5,6 +5,7 @@ import cookieParser from 'cookie-parser'
 import connectDB from './utils/db.js'
 import userRoute from './routes/user.routes.js'
 import productRoute from './routes/product.routes.js'
+import cartRoutes from "./routes/cartRoutes.js";
 
 
 
