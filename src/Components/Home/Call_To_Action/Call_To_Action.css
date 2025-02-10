@@ -1,0 +1,23 @@
+.rightside{
+    background-color: #FF9DED;
+    border-radius: 15px;
+    height:"300px"
+
+}
+.custom-height {
+    height: 100%; /* Default height */
+}
+
+/* Medium Screens (Tablets) */
+@media (max-width: 768px) {
+    .custom-height {
+        height: 125%;
+    }
+}
+
+/* Small Screens (Mobile) */
+@media (max-width: 576px) {
+    .custom-height {
+        height: 100%; /* Adjust height automatically */
+    }
+}

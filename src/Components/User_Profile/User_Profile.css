@@ -1,0 +1,89 @@
+/* Edit Profile Button */
+.edit_profile {
+    background-color: #d9d9d9;
+    height: 50px;
+    width: 100%;
+    max-width: 300px;
+    font-size: 18px;
+    color: #000;
+    border: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* Edit Panel Styles */
+.edit-panel {
+    position: fixed;
+    top: 0;
+    left: -600px;
+    width: 600px; /* Default width */
+    height: 100%;
+    background: #fff;
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: left 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+/* Open State */
+.edit-panel.open {
+    left: 0;
+}
+
+/* Close Button */
+.close-btn {
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    float: right;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Save Button */
+.save-btn {
+    background: #28a745;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 991px) {
+    .edit-panel {
+        width: 70vw; /* Adjust for tablets */
+        left: -70vw;
+    }
+    .edit-panel.open {
+        left: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .edit-panel {
+        width: 90vw; /* Adjust for mobile */
+        left: -90vw;
+    }
+    .edit-panel.open {
+        left: 0;
+    }
+}
